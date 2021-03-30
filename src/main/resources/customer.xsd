@@ -1,0 +1,31 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.pnc.com/customer/soap/ws/customer"
+targetNamespace="http://www.pnc.com/customer/soap/ws/customer" elementFormDefault="qualified">
+ 
+    <xs:element name="CustomerDetailsRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+                <xs:element name="accountnumber" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+ 
+    <xs:element name="CustomerDetailsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Customer" type="tns:Customer"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+ 
+    <xs:complexType name="Customer">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="accountnumber" type="xs:string"/>
+            <xs:element name="city" type="xs:string"/>
+            <xs:element name="address" type="xs:string"/>
+            <xs:element name="phone" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+     
+</xs:schema>
